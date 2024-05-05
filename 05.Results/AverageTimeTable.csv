@@ -1,0 +1,19 @@
+Description,Relational,Document (JSON)
+1.1) Filtering on non-Indexed column - exact match,0.0564894676208496,0.0655809111065334
+1.2) Filtering on non-Indexed column - range query,0.0517644352383083,0.0627672672271728
+1.3) Filtering on indexed column - exact match,0.0571673578686184,0.0649775664011637
+1.4) Filtering on indexed column - range query,0.0582853953043619,0.0642830795711941
+2.1) Use aggregation function COUNT,0.0657983488506741,0.0840492248535156
+2.2) Use aggregation function MAX,0.0536486440234714,0.0598575406604343
+3.1) Joining / traversal where two entities are connected by non-indexed columns,0.1204601791169908,0.1654120948579576
+3.2) Joining / traversal over indexed column (two entities),0.3040791087680393,0.4040680858823988
+3.3) Complex join involving multiple JOINS,1.4644718832439847,1.5909589529037476
+3.4) Recursive query,?,?
+3.5) Optional traversal,2.8844091627332897,3.3297763665517173
+4.1) Union,0.1601146194669935,0.182990656958686
+4.2) Intersection,0.049604852994283,0.0651210678948296
+4.3) Difference,0.5327194929122925,0.6210649278428819
+5.1) Sorting over non-indexed column,0.0607229736116197,0.0818865431679619
+5.2) Sorting over indexed column,0.0611965656280517,0.0646296209759182
+6.1) Apply distinct,0.0646611584557427,0.065892669889662
+7) MapReduce,4.085431165165371,5.285914248890347
