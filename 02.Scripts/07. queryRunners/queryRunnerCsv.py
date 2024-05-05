@@ -78,12 +78,11 @@ with open('query_times_relational.csv', 'w', newline='') as file:
             query_times.append(query_time)
         
         # Calcular el tiempo promedio, excluyendo los valores máximo y mínimo para un promedio justo
-        sorted_times = sorted(query_times)
-        filtered_times = sorted_times[1:-1]  # Remover los tiempos atípicos
+        filtered_times = query_times[1:-1]  # Remover los tiempos atípicos
         average_time = sum(filtered_times) / len(filtered_times)
         
         # Preparar fila para esta consulta con cada tiempo en una columna separada
-        row = [f'query_{query_num}'] + filtered_times + [average_time]
+        row = [f'query_{query_num}'] + query_times + [average_time]
         writer.writerow(row)
 
 print("Results exported to 'query_times_relational.csv'.")
